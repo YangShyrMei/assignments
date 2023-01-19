@@ -1,0 +1,138 @@
+Sec-A:
+1-  Spring 1.0 : lightweight container, generic DAO support, generic transaction management, web application context
+Spring framework 4.2.0 - 
+* Annotation detection on Java 8 default methods (e.g. @Bean)
+* Annotation-based application events (@EventListener)
+* First-class support for annotation attribute aliases (@AliasFor)
+* Full nested path processing for direct field binding
+* Data binding and conversion for JSR-354 Money & Currency
+* Integration with Hibernate ORM 5.0 (natively and via JPA)
+* Standards-based bean scripting via JSR-223 (JRuby, JavaScript)
+* JSR-223 based web views (with a focus on JavaScript on Nashorn)
+* Rich support for CORS and declarative HTTP caching
+* First-class support for HTTP Streaming and Server-Sent Events
+* CompletableFuture for handler methods and @Async methods
+* Support for Jackson’s @JsonView on STOMP endpoint methods
+* A STOMP client for use over TCP and WebSocket channels
+* MockMvc HtmlUnit integration for easy local testing of web pages
+* Integration tests can alternatively be executed with JUnit rules
+Spring Framework 4.3 - 
+*  “Core Container Improvements”
+*  “Data Access Improvements”
+* “Caching Improvements”
+*  “JMS Improvements”
+* “Web Improvements”
+* “WebSocket Messaging Improvements”
+* “Testing Improvements”
+*  “Support for new library and server generations”
+Spring 5-
+* Upgrade to Java SE 8 and Java EE 7
+* Reactive programming model
+* Programming with annotations
+* HTTP/2 support  
+Spring 6.0-
+* JDK 17+
+* General Core Revision
+* Core Container -  bean definition transformation based on pre-resolved constructors and factory methods.
+* Spring MVC -  PathPatternParser used by default
+* Upgrade to R2DBC 1.0
+
+2- The Spring Framework is an open-source application framework that provides infrastructure support for developing Java applications. It provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform.
+A key element of Spring is infrastructural support at the application level: Spring focuses on the "plumbing" of enterprise applications so that teams can focus on application-level business logic, without unnecessary ties to specific deployment environments.
+
+The Spring Framework is an open-source framework for building enterprise Java applications. Spring aims to simplify the complex and cumbersome enterprise Java application development process by offering a framework that includes technologies such as: Aspect-oriented programming (AOP) Dependency injection (DI)
+Spring is a lightweight framework that can be used to create scalable, secure, and robust enterprise web applications.
+
+3-  Advantages of Spring Framework are:
+* POJO (plain old java object) is used
+* Use of Modularity architecture
+* Inversion Control
+* Use of AOP
+* Transaction management is done in much more consistent manner
+* Testing can be done using Junit and various other.
+* Allows Web application development
+* Has pluggability
+* Can reuse 
+
+4-  The features of Spring Framework are:
+* Inversion of Control Container - it provides a way to configure and manage java objects. It uses Dependency Injection.
+* Aspect oriented programming - it provides more modularity. Thus providing a robust environment.
+* Transaction Management framework
+* Spring MVC framework - enables developers to create applications using the model, view and controller pattern.
+* Spring test frameworks - Mock, JUnit testing etc;
+5-  The spring framework consists of 20 various modules. The modules are grouped into:
+
+* Core Container
+* Data Access/Integration
+* Web
+* AOP
+* Instrumentation
+* Test
+
+* Core Container- It provides IOC DI features- Beans, Core, Context, spEL JCore and beans provides IOC DI features
+* Data Access/Integration- used to interact with database - JDBC, ORM, OXM, JMS, Transactions.
+* Web- supports web application - Web, Servlet, Portlet, WebSocket.
+* AOP- supports modularity - AOP
+* Test- JUnit, mock objects are used for testing
+
+6- A Spring configuration file is an XML file that contains the classes information. It describes how those classes are configured as well as introduced to each other. The XML configuration files, however, are verbose and cleaner. If it’s not planned and written correctly, it becomes very difficult to manage in big projects.  It consists of various tags such as beans which again consists of bean tag where the information about each bean is given. It also helps to externalise the configuration so that we can work with the same application code in different environments.
+It provides an open-source framework for flexibly wiring together the different parts of an application, each of which is represented by a bean identified by a unique id.
+
+7 -  Spring Boot Framework has mainly four major Components.
+* Spring Boot Starters
+* Spring Boot AutoConfigurator
+* Spring Boot CLI
+* Spring Boot Actuator
+
+Spring Boot Starters is one of the major key features or components of Spring Boot Framework. The main responsibility of Spring Boot Starter is to combine a group of common or related dependencies into single dependencies.
+
+
+
+
+9-  The Spring framework can be considered as a collection of sub-frameworks, also referred to as layers, such as Spring AOP, Spring ORM, Spring Web Flow, and Spring Web MVC. You can use any of these modules separately while constructing a Web application. The modules may also be grouped together to provide better functionalities in a web application. 
+Spring IoC Container is the core of Spring Framework. It creates the objects, configures and assembles their dependencies, manages their entire life cycle. The Container uses Dependency Injection(DI) to manage the components that make up the application. It gets the information about the objects from a configuration file(XML) or Java Code or Java Annotations and POJO class. These objects are called Beans. Since the Controlling of Java objects and their lifecycle is not done by the developers, hence the name Inversion Of Control. 
+
+10-  Dependency Injection is a fundamental aspect of the Spring framework, through which the Spring container “injects” objects into other objects or “dependencies”. This allows for loose coupling of components and moves the responsibility of managing components onto the container. It can be done in two ways:
+* setter injection
+* Constructor injection  
+
+We need dependency because class One needs the object of class Two to instantiate or operate a method, then class One is said to be dependent on class Two. Now though it might appear okay to depend a module on the other but, in the real world, this could lead to a lot of problems, including system failure. Hence such dependencies need to be avoided. Spring IOC resolves such dependencies with Dependency Injection, which makes the code easier to test and reuse Loose coupling between classes can be possible by defining interfaces for common functionality and the injector will instantiate the objects of required implementation. The task of instantiating objects is done by the container according to the configurations specified by the developer.
+
+12- In the resources folder  of the project-> open the application.properties file. Then type “server.port=9090” 
+
+13 - we can disable the white label error page entirely, by setting the server.error.whitelabel.enabled property to false in the application.properties in resources folder.
+
+14- For Internationalization, it is the process of developing an application in such a way that it enables the localization. For example : Application must support to have a separate messages.properties files for each locale/region.
+For localisation, It is the process of adopting an internationalized application to specific regions/locales. We can write locale specific details in the corresponding property files.
+Ex : US locale specific details can be added inside messages_en.properties and German locale specific details can be added inside messages_de.properties.
+
+
+15- BeansFactory is the root interface for accessing a Spring bean container. It is the actual container that instantiates, configures, and manages a number of beans. These beans collaborate with one another and thus have dependencies between themselves. These dependencies are reflected in the configuration data used by the BeanFactory where as application context is designed on top of the BeanFactory interface. The ApplicationContext interface is the advanced container that enhances BeanFactory functionality in a more framework-oriented style. While the BeanFactory provides basic functionality for managing and manipulating beans, often in a programmatic way, the ApplicationContext provides extra functionality like MessageSource, Access to resources, Event propagation to beans, Loading of multiple (hierarchical) contexts etc. There are so many implementation classes that can be used such as ClassPathXmlApplicationContext, FileSystemXmlApplicationContext, etc.,
+
+16 - @Inject is a part of Java CDI. it is not dependent on any DI framework. It makes your system loosely coupled. Default scope of auto wired bean is Singleton where as @Autowired is a part of Spring Framework. It makes your application tightly coupled with Spring framework. In the future , if you want to move to another DI framework then you need reconfigure your application. To uniquely identify the different beans, we should use the @Qualifier annotation along with @Autowired where as @Autowired annotation can be used alone.
+
+
+
+
+
+SecB
+1- D
+2-A
+3-B
+4-A
+5-B
+6-A
+7-A
+8-A
+9-A
+10-D
+11-B
+12-A
+13-B
+14-B
+15-D
+16-D
+17-A
+18-B
+19-C
+20-D
